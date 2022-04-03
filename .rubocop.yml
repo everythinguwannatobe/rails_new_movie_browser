@@ -1,0 +1,25 @@
+# Refer: https://evilmartians.com/chronicles/rubocoping-with-legacy-bring-your-ruby-code-up-to-standard
+
+inherit_mode:
+  merge:
+    - Exclude
+
+require: standard
+
+inherit_gem:
+  standard: config/ruby-2.7.yml
+
+inherit_from:
+  - .rubocop_rails.yml
+  - .rubocop_rspec.yml
+  - .rubocop_strict.yml
+
+AllCops:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/schema.rb
+    - db/migrate/*.rb
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*

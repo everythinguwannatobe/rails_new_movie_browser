@@ -1,0 +1,17 @@
+// Styling for web-console
+.console-prompt-label,
+.console-prompt-display,
+.console-message {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+// Styling for debug params
+.debug_dump {
+  width: 50%;
+  box-sizing: border-box;
+  background-color: #EFEFEF;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}

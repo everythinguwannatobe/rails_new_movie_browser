@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <title>Testapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body class="d-flex flex-column h-100 bg-body">
+    <main class="flex-shrink-0">
+      <%= render "shared/navbar" %>
+      <%= render "shared/notices" %>
+
+      <div class="container mt-5 mx-auto">
+        <%= yield %>
+      </div>
+    </main>
+
+    <%= render "shared/footer" %>
+  </body>
+</html>
