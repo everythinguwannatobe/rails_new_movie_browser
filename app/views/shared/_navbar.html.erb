@@ -5,15 +5,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item"><%= link_to "My Account", account_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= button_to "Logout", logout_path, method: :delete %></li>
-        <% else %>
-          <li class="nav-item"><%= link_to "Login", login_path, class: "nav-link" %></li>
-          <li class="nav-item"><%= link_to "Sign Up", sign_up_path, class: "nav-link" %></li>
-        <% end %>
-      </ul>
     </div>
   </div>
 </nav>
