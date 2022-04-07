@@ -17868,3 +17868,44 @@ textarea.form-control-lg {
 .bi-filetype-xlsx::before {
   content: "\f793";
 }
+
+.movie__card {
+  border-radius: 12px;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  color: #333;
+  margin: 0 20px 3rem 20px;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  transition: transform 0.2s cubic-bezier(0.34, 2, 0.6, 1), box-shadow 0.1s ease;
+}
+.movie__card:hover {
+  box-shadow: 0 12px 19px -7px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+}
+.movie__card--body {
+  background-color: black;
+  color: #dee2e6;
+  position: relative;
+  padding: 20px;
+}
+.movie__card--rating {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  background-color: #212529;
+  padding: 5px;
+  color: #ffc107;
+  text-align: center;
+  display: block;
+  z-index: 1;
+  min-width: 35px;
+  font-size: 0.8em;
+  border-radius: 50%;
+  border: 2px #343a40 solid;
+}
+.movie__card--title {
+  margin-right: 24px;
+  margin-bottom: 1rem;
+}

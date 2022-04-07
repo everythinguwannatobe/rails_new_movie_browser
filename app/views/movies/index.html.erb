@@ -1,8 +1,22 @@
 <h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
 
-<ul>
+<div class="row mt-5">
   <% movies.each do |movie| %>
-    <li><%= movie["title"] %></li>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="movie__card">
+        <div class="">
+          <%= image_tag 'https://image.tmdb.org/t/p/w300/' + movie["poster_path"], class: "card-img-top" %>
+        </div>
+        <div class="movie__card--body">
+          <span class="movie__card--rating"><%= movie["vote_average"] %></span>
+          <div class="movie__card--title text-truncate">
+            <%= movie["title"] %>
+          </div>
+          <p class="small mb-0"><%= movie["genre_ids"].join(',') %></p>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
+
+<%= movies[0] %>
