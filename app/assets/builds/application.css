@@ -17889,6 +17889,7 @@ textarea.form-control-lg {
   color: #dee2e6;
   position: relative;
   padding: 20px;
+  min-height: 125px;
 }
 .movie__card--rating {
   position: absolute;
