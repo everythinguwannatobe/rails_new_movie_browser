@@ -33,6 +33,7 @@ module RailsNewMovieBrowser
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.generators.helper = false  end
+    config.generators.helper = true
+  end
 
 end
