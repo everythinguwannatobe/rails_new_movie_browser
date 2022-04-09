@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+genres = Tmdb::Genre.new.list_movie_genre_ids
+genres["genres"].each do |genre|
+  Genre.find_or_create_by(
+    genre_id: genre["id"].to_s,
+    name: genre["name"]
+  )
+end
+
+

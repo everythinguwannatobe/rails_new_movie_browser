@@ -1,0 +1,16 @@
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+  <div class="movie__card">
+    <%= link_to movie_path(movie["id"]), class: "text-decoration-none" do %>
+      <div class="">
+        <%= image_tag 'https://image.tmdb.org/t/p/w300/' + movie["poster_path"], class: "card-img-top" %>
+      </div>
+      <div class="movie__card--body d-flex flex-column justify-content-between">
+        <span class="movie__card--rating"><%= movie["vote_average"] %></span>
+        <div class="movie__card--title text-truncate">
+          <%= movie["title"] %>
+        </div>
+        <p class="small mb-0 align-items-end"><%= movie_genre_names(movie["genre_ids"]) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -6,7 +6,7 @@ module Tmdb
       @page = page
     end
 
-    def movie_genre_list
+    def list_movie_genre_ids
       get_request(
         http_method: :get,
         endpoint: "genre/movie/list",

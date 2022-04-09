@@ -1,22 +1,24 @@
-<h1>Movies#index</h1>
-
-<div class="row mt-5">
-  <% movies.each do |movie| %>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-      <div class="movie__card">
-        <div class="">
-          <%= image_tag 'https://image.tmdb.org/t/p/w300/' + movie["poster_path"], class: "card-img-top" %>
-        </div>
-        <div class="movie__card--body">
-          <span class="movie__card--rating"><%= movie["vote_average"] %></span>
-          <div class="movie__card--title text-truncate">
-            <%= movie["title"] %>
-          </div>
-          <p class="small mb-0"><%= movie_genre_names(movie["genre_ids"]) %></p>
-        </div>
-      </div>
+<div class="movies-background">
+  <div class="container">
+    <div class="btn-group ms-3">
+      <a href="#" class="btn btn-outline-success active" aria-current="page">Popular</a>
+      <a href="#" class="btn btn-outline-success">Link</a>
+      <a href="#" class="btn btn-outline-success">Link</a>
     </div>
-  <% end %>
-</div>
 
-<%= movie_genre_names(movies[0]["genre_ids"]) %>
+    <div class="row mt-5">
+      <%= render partial: 'movies/movie', collection: @movies %>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination d-flex justify-content-center bg-black mx-3 py-2">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item">
+          <%= link_to "Next", movies_path(page: @current_page.to_i + 1), class: "page-link" %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <%= link_to "Next", movies_path(page: params["page"].nil? ? "2" : params["page"].to_i + 1) %>
+</div>

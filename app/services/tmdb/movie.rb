@@ -14,5 +14,13 @@ module Tmdb
       )
     end
 
+    def get_details(show_movie_id)
+      get_request(
+        http_method: :get,
+        endpoint: "movie/#{show_movie_id}",
+        params: client_params
+      )
+    end
+
   end
 end
