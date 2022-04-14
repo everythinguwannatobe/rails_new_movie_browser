@@ -17,8 +17,8 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
 gem "faker", "~> 2.18"
 gem "faraday"
-gem "oj"
-# gem "themoviedb"
+gem 'kaminari'
+gem 'faraday-http-cache'
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]

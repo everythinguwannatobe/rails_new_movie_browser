@@ -19,6 +19,7 @@ module Tmdb
     def client
       @client ||= Faraday.new(BASE_URL) do |conn|
         conn.url_prefix = BASE_URL
+        conn.use Faraday::HttpCache, store: Rails.cache, logger: Rails.logger
         conn.request :json
         conn.response :json, content_type: "application/json"
       end
