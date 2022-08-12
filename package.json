@@ -7,7 +7,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
-    "esbuild": "^0.15.1",
+    "esbuild": "^0.15.2",
     "sass": "^1.54.4"
   },
   "scripts": {
